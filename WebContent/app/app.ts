@@ -8,7 +8,7 @@
 /// <amd-dependency path="core"/>
 
 export module BuxNextClient {
-    export var buxNextClientModule:ng.IModule = angular.module("buxNextClient", ['ui.router', 'ui.bootstrap', 'ui.utils', 'checklist-model', 'ngMessages', 'BuxNextClientCore']);
+    export var buxNextClientModule:ng.IModule = angular.module("buxNextClient", ['ui.router', 'ui.bootstrap', 'ui.utils', 'checklist-model', 'ngMessages', 'BuxNextClientCore']) ;
 }
 
 
