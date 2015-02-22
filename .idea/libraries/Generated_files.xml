@@ -1,0 +1,51 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/WebContent/sdf.js" />
+        <item url="file://$PROJECT_DIR$/WebContent/app/core/index.js" />
+        <item url="file://$PROJECT_DIR$/WebContent/app/app.js" />
+        <item url="file://$PROJECT_DIR$/WebContent/app/bootstrap.js" />
+        <item url="file://$PROJECT_DIR$/WebContent/app/core/services/AuthService.js" />
+        <item url="file://$PROJECT_DIR$/WebContent/app/core/controllers/anonController.js" />
+        <item url="file://$PROJECT_DIR$/WebContent/app/core/buxNextClientCoreModule.js" />
+        <item url="file://$PROJECT_DIR$/WebContent/app/routes.js" />
+        <item url="file://$PROJECT_DIR$/WebContent/app/core/controllers/authController.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/WebContent/app/Constants.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/Constants.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/components/product/Views/ProductMain.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/components/product/Views/ProductMain.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/components/product/Defenitions/IProductSearchScope.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/components/product/Declarations/IProductSearchScope.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/components/product/Defenitions/IProductSearchScope.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/components/product/Declarations/IProductSearchScope.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/components/product/Filters/HighlightFilter.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/components/product/Services/DummyDataService.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/components/product/Services/SyncService.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/components/product/Controllers/ProductSearchController.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/components/product/Controllers/ProductInfoController.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/components/product/index.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/components/product/BuxNextClientComponentsProductModule.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/routes.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/components/product/Services/DummyDataService.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/components/product/Services/SyncService.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/components/product/Controllers/ProductSearchController.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/components/product/Controllers/ProductInfoController.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/components/product/index.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/components/product/BuxNextClientComponentsProductModule.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/sdf.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/core/index.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/app.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/bootstrap.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/core/services/AuthService.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/core/controllers/anonController.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/routes.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/core/buxNextClientCoreModule.js" />
+      <root url="file://$PROJECT_DIR$/WebContent/app/core/controllers/authController.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
