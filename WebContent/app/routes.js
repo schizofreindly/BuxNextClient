@@ -17,7 +17,7 @@ define(["require", "exports", "./app"], function (require, exports, app) {
                     controller: 'anonController'
                 }).state('main.auth', {
                     url: 'auth',
-                    templateUrl: 'app/core/views/anonView.html',
+                    templateUrl: 'app/core/views/authView.html',
                     controller: 'authController'
                 }).state('main.anon.register', {
                     url: '/register',
