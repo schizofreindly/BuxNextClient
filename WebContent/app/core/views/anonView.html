@@ -3,22 +3,23 @@
     <md-toolbar>
         <div class="md-toolbar-tools" style="align-content: center">
             <div layout="row" flex class="fill-height">
-                <md-button ng-click="toggleNavbar('left')">Huy</md-button>
+                <ng-hamburger-helper ng-click="toggleNavbar('left')" arrowWhen="false"></ng-hamburger-helper>
                 <img src="assets/img/Logo.png">
-                <input id="search" type="text" placeholder="Type here">
+                <input id="search" type="text" placeholder="Search">
                 <span class="space"></span>
-                <md-button class="md-primary md-raised md-hue-1 top-button"><md-icon md-svg-icon="buxNextClientCore:search"></md-icon><span class="space"></span>Search</md-button>
+              <md-button class="md-primary md-raised md-hue-1 top-button"><md-icon md-svg-icon="buxNextClientCore:search"></md-icon><span class="space"></span>Search</md-button>
+              <span class="space"></span>
               <span flex></span>
               <md-button class="md-accent md-raised md-hue-1 top-button"><md-icon md-svg-icon="buxNextClientCore:vpnKey"></md-icon><span class="space">REGISTER</span></md-button>
-              <span style="margin-left: 10px"></span>
+              <span class="space"></span>
               <md-button class="md-accent md-raised md-hue-1 top-button"><md-icon md-svg-icon="buxNextClientCore:login"></md-icon><span class="space"></span>SIGN-IN</span></md-button>
             </div>
         </div>
         </md-toolbar>
     </div>
-    <div layout="row" flex layout-fill>
+    <section layout="row" flex layout-fill>
         <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="navBarIsOpen">
-            <md-toolbar class="md-theme-indigo">
+            <md-toolbar>
                 <h1 class="md-toolbar-tools">Sidenav Left</h1>
             </md-toolbar>
             <md-content class="md-padding">
@@ -31,5 +32,5 @@
                 </p>
             </md-content>
         </md-sidenav>
-    </div>
+    </section>
 </div>

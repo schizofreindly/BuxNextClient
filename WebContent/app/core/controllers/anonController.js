@@ -12,11 +12,14 @@ define(["require", "exports", "../buxNextClientCoreModule"], function (require, 
                         var _this = this;
                         this.$scope = $scope;
                         this.$mdSidenav = $mdSidenav;
-                        this.$scope.navBarIsOpen = true;
+                        this.init();
                         this.$scope.toggleNavbar = function (id) {
                             _this.toggleNavbar(id);
                         };
                     }
+                    anonController.prototype.init = function () {
+                        this.$scope.navBarIsOpen = false;
+                    };
                     anonController.prototype.toggleNavbar = function (id) {
                         this.$scope.navBarIsOpen = !this.$scope.navBarIsOpen;
                     };

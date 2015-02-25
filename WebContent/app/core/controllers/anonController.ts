@@ -11,8 +11,13 @@ export module BuxNextClient.Core.Controllers {
         static $inject:string[] = ["$scope", "$mdSidenav"];
 
         constructor(private $scope:coreDefinitions.IAnonControllerScope, private $mdSidenav:any) {
-            this.$scope.navBarIsOpen = true;
+            this.init();
             this.$scope.toggleNavbar = (id:string):void => { this.toggleNavbar(id) };
+        }
+
+        private init(): void
+        {
+            this.$scope.navBarIsOpen = false;
         }
 
         private toggleNavbar(id:string):void {

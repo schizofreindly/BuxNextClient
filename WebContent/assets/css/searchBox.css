@@ -8,8 +8,10 @@
     box-shadow:0 0 5px #666 inset;
     height:38px;
     line-height:38px;
-    width:600px;
-    text-indent:5px;
+    width:100%;
+    max-width: 500px;
+    min-width: 200px;
+    text-indent:10px;
     margin-left: 20px;
     margin-bottom: 0px;
 }
