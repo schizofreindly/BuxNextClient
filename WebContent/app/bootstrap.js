@@ -14,7 +14,6 @@ requirejs.config({
         "angular-aria": "assets/libs/angular-aria/angular-aria",
         "angular-animate": "assets/libs/angular-animate/angular-animate",
         "angular-material": "assets/libs/angular-material/angular-material",
-        "hamburger-helper": "assets/libs/angular-hamburger-helper/ng-hamburger-helper",
         "core": "app/core/index"
     },
     shim: {
@@ -44,9 +43,6 @@ requirejs.config({
         },
         'angular-material': {
             deps: ['angular', 'angular-aria', 'angular-animate']
-        },
-        'hamburger-helper': {
-            deps: ['angular']
         },
         'core': {
             deps: ['angular']
