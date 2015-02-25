@@ -7,7 +7,7 @@ define(["require", "exports", './iconSetConfig', "angular", "angular-material"],
         var Core;
         (function (Core) {
             Core.buxNextClientCoreModule = angular.module("BuxNextClientCore", ['ngMaterial']);
-            Core.buxNextClientCoreModule.config([iconSetConfigImport.BuxNextClient.Core.iconSetConfig]);
+            Core.buxNextClientCoreModule.config(iconSetConfigImport.BuxNextClient.Core.iconSetConfig);
         })(Core = BuxNextClient.Core || (BuxNextClient.Core = {}));
     })(BuxNextClient = exports.BuxNextClient || (exports.BuxNextClient = {}));
 });

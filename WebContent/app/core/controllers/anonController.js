@@ -1,4 +1,5 @@
 /// <reference path="../../../typings/angularjs/angular.d.ts" />
+/// <reference path="../coreDefinitions.ts" />
 define(["require", "exports", "../buxNextClientCoreModule"], function (require, exports, coreModule) {
     var BuxNextClient;
     (function (BuxNextClient) {
@@ -7,14 +8,19 @@ define(["require", "exports", "../buxNextClientCoreModule"], function (require, 
             var Controllers;
             (function (Controllers) {
                 var anonController = (function () {
-                    function anonController($scope) {
+                    function anonController($scope, $mdSidenav) {
+                        var _this = this;
                         this.$scope = $scope;
-                        $scope.title1 = 'Button223';
-                        $scope.title4 = 'Warn';
-                        $scope.isDisabled = true;
-                        $scope.googleUrl = 'http://google.com';
+                        this.$mdSidenav = $mdSidenav;
+                        this.$scope.navBarIsOpen = true;
+                        this.$scope.toggleNavbar = function (id) {
+                            _this.toggleNavbar(id);
+                        };
                     }
-                    anonController.$inject = ["$scope"];
+                    anonController.prototype.toggleNavbar = function (id) {
+                        this.$scope.navBarIsOpen = !this.$scope.navBarIsOpen;
+                    };
+                    anonController.$inject = ["$scope", "$mdSidenav"];
                     return anonController;
                 })();
                 Controllers.anonController = anonController;

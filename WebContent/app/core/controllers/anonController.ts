@@ -1,27 +1,29 @@
 /// <reference path="../../../typings/angularjs/angular.d.ts" />
+/// <reference path="../coreDefinitions.ts" />
 
 import coreModule = require("../buxNextClientCoreModule");
 
-export interface IAnonScope
-{
-    title1: string;
-    title4: string;
-    isDisabled: boolean;
-    googleUrl: string;
-}
+
 
 export module BuxNextClient.Core.Controllers {
+
     export class anonController {
+        static $inject:string[] = ["$scope", "$mdSidenav"];
 
-        static $inject : string[] = ["$scope"];
-        constructor(private $scope: IAnonScope) {
-            $scope.title1 = 'Button223';
-            $scope.title4 = 'Warn';
-            $scope.isDisabled = true;
-            $scope.googleUrl = 'http://google.com';
+        constructor(private $scope:coreDefinitions.IAnonControllerScope, private $mdSidenav:any) {
+            this.$scope.navBarIsOpen = true;
+            this.$scope.toggleNavbar = (id:string):void => { this.toggleNavbar(id) };
         }
-    }
 
+        private toggleNavbar(id:string):void {
+            this.$scope.navBarIsOpen = !this.$scope.navBarIsOpen;
+        }
+
+    }
 
     coreModule.BuxNextClient.Core.buxNextClientCoreModule.controller('anonController', anonController);
 }
+
+
+
+

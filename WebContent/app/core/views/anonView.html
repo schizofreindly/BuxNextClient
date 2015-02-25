@@ -1,13 +1,35 @@
-<div layout="column" style="width: 1024px; margin: auto;">
+<div layout="column" style="margin: auto;" layout-fill>
+    <div>
     <md-toolbar>
-        <div class="md-toolbar-tools">
-            <span flex></span>
-              <md-button style="font-size: 20px;"><md-icon icon="../../assets/libs/material-design-icons/communication/svg/production/ic_vpn_key_24px.svg"></md-icon>SIGN-IN</md-button>
+        <div class="md-toolbar-tools" style="align-content: center">
+            <div layout="row" flex class="fill-height">
+                <md-button ng-click="toggleNavbar('left')">Huy</md-button>
+                <img src="assets/img/Logo.png">
+                <input id="search" type="text" placeholder="Type here">
+                <span class="space"></span>
+                <md-button class="md-primary md-raised md-hue-1 top-button"><md-icon md-svg-icon="buxNextClientCore:search"></md-icon><span class="space"></span>Search</md-button>
+              <span flex></span>
+              <md-button class="md-accent md-raised md-hue-1 top-button"><md-icon md-svg-icon="buxNextClientCore:vpnKey"></md-icon><span class="space">REGISTER</span></md-button>
+              <span style="margin-left: 10px"></span>
+              <md-button class="md-accent md-raised md-hue-1 top-button"><md-icon md-svg-icon="buxNextClientCore:login"></md-icon><span class="space"></span>SIGN-IN</span></md-button>
+            </div>
         </div>
-    </md-toolbar>
-    <div flex style="padding: 20px">
-        <md-content>
-
-        </md-content>
+        </md-toolbar>
+    </div>
+    <div layout="row" flex layout-fill>
+        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="navBarIsOpen">
+            <md-toolbar class="md-theme-indigo">
+                <h1 class="md-toolbar-tools">Sidenav Left</h1>
+            </md-toolbar>
+            <md-content class="md-padding">
+                <md-button ng-click="close()" class="md-primary" hide-gt-md>
+                    Close Sidenav Left
+                </md-button>
+                <p hide-md show-gt-md>
+                    This sidenav is locked open on your device. To go back to the default behavior,
+                    narrow your display.
+                </p>
+            </md-content>
+        </md-sidenav>
     </div>
 </div>

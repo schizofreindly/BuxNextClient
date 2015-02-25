@@ -4,16 +4,16 @@ export module BuxNextClient.Core
 {
     export class iconSetConfig
     {
-        static $inject = "$mdIconProvider";
+        static $inject : string[] = ["$mdIconProvider"];
 
-        constructor(private $mdIconProvider: any)
+        constructor($mdIconProvider: any)
         {
-            this.init();
-        }
+            $mdIconProvider
+                .icon("buxNextClientCore:vpnKey", "assets/libs/material-design-icons/action/svg/design/ic_account_circle_24px.svg", 24)
+                .icon("buxNextClientCore:search", "assets/libs/material-design-icons/action/svg/design/ic_search_24px.svg", 24)
+                .icon("buxNextClientCore:login", "assets/img/log-in-512px.svg", 24)
 
-        init() :  void {
-            this.$mdIconProvider
-                .icon("buxNextClientCore: vpnKey", "assets/libs/material-design-icons/communication/2x_web/ic_vpn_key_white_24dp.png", 24);
+            ;
         }
     }
 }
