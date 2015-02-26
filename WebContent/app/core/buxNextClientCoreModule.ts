@@ -7,7 +7,7 @@ import iconSetConfigImport = require('./iconSetConfig');
 import hamburgerButtonDirectiveImport = require('./directives/hamburgerButton/hamburgerButtonDirective');
 
 export module BuxNextClient.Core {
-    export var buxNextClientCoreModule:ng.IModule = angular.module("BuxNextClientCore", ['ngMaterial']);
+    export var buxNextClientCoreModule:ng.IModule = angular.module("BuxNextClientCore", ['ngMaterial', 'ngAnimate']);
 
     buxNextClientCoreModule.config(iconSetConfigImport.BuxNextClient.Core.iconSetConfig);
 

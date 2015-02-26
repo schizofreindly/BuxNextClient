@@ -6,7 +6,7 @@ define(["require", "exports", './iconSetConfig', './directives/hamburgerButton/h
     (function (BuxNextClient) {
         var Core;
         (function (Core) {
-            Core.buxNextClientCoreModule = angular.module("BuxNextClientCore", ['ngMaterial']);
+            Core.buxNextClientCoreModule = angular.module("BuxNextClientCore", ['ngMaterial', 'ngAnimate']);
             Core.buxNextClientCoreModule.config(iconSetConfigImport.BuxNextClient.Core.iconSetConfig);
             Core.buxNextClientCoreModule.directive('hamburgerButton', ["$animate", function ($animate) { return new hamburgerButtonDirectiveImport.BuxNextClient.Core.Directives.hamburgerButtonDirective($animate); }]);
         })(Core = BuxNextClient.Core || (BuxNextClient.Core = {}));

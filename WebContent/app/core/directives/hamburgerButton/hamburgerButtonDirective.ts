@@ -4,7 +4,7 @@ export module BuxNextClient.Core.Directives
 {
     export interface hamburgerButtonDirectiveScope extends ng.IScope
     {
-        isOpen : boolean;
+        isOpen() : boolean;
     }
 
     export class hamburgerButtonDirective implements ng.IDirective
@@ -21,28 +21,27 @@ export module BuxNextClient.Core.Directives
         replace: boolean = true;
 
         scope: any = {
-            isOpen: '@'
+            isOpen: '&isOpen'
         }
 
         link:ng.IDirectiveLinkFn = (scope: hamburgerButtonDirectiveScope,
                                      instanceElement: ng.IAugmentedJQuery,
                                      instanceAttributes: ng.IAttributes) => {
 
+            instanceElement.bind("click", () => {
+                if (scope.isOpen()) {
+                    instanceElement.removeClass('is-open');
+                    instanceElement.addClass('is-closed');
+                }
+                else
+                {
+                    instanceElement.removeClass('is-closed');
+                    instanceElement.addClass('is-open');
+                }
+            });
         }
     }
 
-    export class hamburgerButtonDirectiveAnimation
-    {
-        constructor() {}
-
-        addClass(): void  {
-            alert('add Class');
-        }
-
-        removeClass(): void  {
-            alert('remove Class');
-        }
-    }
 
 
 }
