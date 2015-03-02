@@ -5,10 +5,11 @@
 /// <amd-dependency path="uiUtils"/>
 /// <amd-dependency path="checkListModel"/>
 /// <amd-dependency path="angular-messages"/>
+/// <amd-dependency path="angular-material"/>
 /// <amd-dependency path="core"/>
-define(["require", "exports", "angular", "uiRouter", "uiBootstrap", "uiUtils", "checkListModel", "angular-messages", "core"], function (require, exports) {
+define(["require", "exports", "angular", "uiRouter", "uiBootstrap", "uiUtils", "checkListModel", "angular-messages", "angular-material", "core"], function (require, exports) {
     var BuxNextClient;
     (function (BuxNextClient) {
-        BuxNextClient.buxNextClientModule = angular.module("buxNextClient", ['ui.router', 'ui.bootstrap', 'ui.utils', 'checklist-model', 'ngMessages', 'BuxNextClientCore']);
+        BuxNextClient.buxNextClientModule = angular.module("buxNextClient", ['ui.router', 'ui.bootstrap', 'ui.utils', 'checklist-model', 'ngMessages', 'ngMaterial', 'BuxNextClientCore']);
     })(BuxNextClient = exports.BuxNextClient || (exports.BuxNextClient = {}));
 });

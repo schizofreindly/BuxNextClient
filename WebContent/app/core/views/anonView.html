@@ -1,4 +1,4 @@
-<div layout="column" style="margin: auto;" layout-fill>
+<div layout="column" style="margin: auto; overflow: hidden;" layout-fill>
     <div>
     <md-toolbar>
         <div class="md-toolbar-tools" style="align-content: center">
@@ -12,25 +12,89 @@
               <span flex></span>
               <md-button class="md-accent md-raised md-hue-1 top-button"><md-icon md-svg-icon="buxNextClientCore:vpnKey"></md-icon><span class="space">REGISTER</span></md-button>
               <span class="space"></span>
-              <md-button class="md-accent md-raised md-hue-1 top-button"><md-icon md-svg-icon="buxNextClientCore:login"></md-icon><span class="space"></span>SIGN-IN</span></md-button>
+              <md-button class="md-accent md-raised md-hue-1 top-button" ui-sref="main.anon.signin"><md-icon md-svg-icon="buxNextClientCore:login"></md-icon><span class="space"></span>SIGN-IN</span></md-button>
             </div>
         </div>
         </md-toolbar>
+        <md-toolbar class="md-primary md-hue-3" style="min-height: 3px; height: 3px;">
+        </md-toolbar>
     </div>
     <section layout="row" flex layout-fill>
-        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="navBarIsOpen">
-            <md-toolbar>
-                <h1 class="md-toolbar-tools">Sidenav Left</h1>
+        <md-sidenav class="md-sidenav-left md-whiteframe-z2 menu" style="overflow: hidden; background: #F5F5F5;" md-component-id="left" md-is-locked-open="navBarIsOpen">
+            <md-toolbar class="md-primary menu-title" layout="row">
+                <div flex="5" style="background: #DC143C;"></div>
+                <span flex class="md-toolbar-tools menu-title">favourites</span>
             </md-toolbar>
-            <md-content class="md-padding">
-                <md-button ng-click="close()" class="md-primary" hide-gt-md>
-                    Close Sidenav Left
-                </md-button>
-                <p hide-md show-gt-md>
-                    This sidenav is locked open on your device. To go back to the default behavior,
-                    narrow your display.
-                </p>
+            <md-content style="overflow: hidden; background: #F5F5F5;">
+                <md-list class="menu-list">
+                    <md-item>
+                        <md-item-content>
+                            <a><md-icon md-svg-icon="buxNextClientCore:slideshow"></md-icon><span>My Videos</span></a>
+                        </md-item-content>
+                    </md-item>
+                    <md-item>
+                        <md-item-content>
+                            <a><md-icon md-svg-icon="buxNextClientCore:slideshow"></md-icon><span>My Videos</span></a>
+                        </md-item-content>
+                    </md-item>
+                    <md-item>
+                        <md-item-content>
+                            <a><md-icon md-svg-icon="buxNextClientCore:slideshow"></md-icon><span>My Videos</span></a>
+                        </md-item-content>
+                    </md-item>
+                </md-list>
+            </md-content>
+            <md-toolbar class="md-primary menu-title" layout="row">
+                <div flex="5" style="background: #2E8B57;"></div>
+                <span flex class="md-toolbar-tools menu-title">best of</span>
+            </md-toolbar>
+            <md-content style="overflow: hidden; background: #F5F5F5;">
+                <md-list class="menu-list">
+                    <md-item>
+                        <md-item-content>
+                            <a><md-icon md-svg-icon="buxNextClientCore:slideshow"></md-icon><span>My Videos</span></a>
+                        </md-item-content>
+                    </md-item>
+                    <md-item>
+                        <md-item-content>
+                            <a><md-icon md-svg-icon="buxNextClientCore:slideshow"></md-icon><span>My Videos</span></a>
+                        </md-item-content>
+                    </md-item>
+                    <md-item>
+                        <md-item-content>
+                            <a><md-icon md-svg-icon="buxNextClientCore:slideshow"></md-icon><span>My Videos</span></a>
+                        </md-item-content>
+                    </md-item>
+                </md-list>
+            </md-content>
+            <md-divider></md-divider>
+            <md-toolbar class="md-primary menu-title" layout="row">
+                <div flex="5" style="background: #158fef;"></div>
+                <span flex class="md-toolbar-tools menu-title">Jsut for fun</span>
+            </md-toolbar>
+            <md-content style="overflow: hidden; background: #F5F5F5;">
+                <md-list class="menu-list">
+                    <md-item>
+                        <md-item-content>
+                            <a><md-icon md-svg-icon="buxNextClientCore:slideshow"></md-icon><span>My Videos</span></a>
+                        </md-item-content>
+                    </md-item>
+                    <md-item>
+                        <md-item-content>
+                            <a><md-icon md-svg-icon="buxNextClientCore:slideshow"></md-icon><span>My Videos</span></a>
+                        </md-item-content>
+                    </md-item>
+                    <md-item>
+                        <md-item-content>
+                            <a><md-icon md-svg-icon="buxNextClientCore:slideshow"></md-icon><span>My Videos</span></a>
+                        </md-item-content>
+                    </md-item>
+                </md-list>
+                <md-divider></md-divider>
             </md-content>
         </md-sidenav>
+        <md-content flex layout-fill>
+
+        </md-content>
     </section>
 </div>

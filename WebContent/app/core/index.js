@@ -1,6 +1,7 @@
 /// <amd-dependency path="app/core/controllers/anonController"/>
 /// <amd-dependency path="app/core/controllers/authController"/>
-define(["require", "exports", "app/core/controllers/anonController", "app/core/controllers/authController"], function (require, exports) {
+/// <amd-dependency path="app/core/controllers/signinController"/>
+define(["require", "exports", "app/core/controllers/anonController", "app/core/controllers/authController", "app/core/controllers/signinController"], function (require, exports) {
     var BuxNextClient;
     (function (BuxNextClient) {
         var Core;
