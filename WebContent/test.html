@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/modalShakeForm.css">
+    <script type="application/javascript" src="https://code.jquery.com/jquery-2.1.3.js"></script>
+    <title></title>
+    <script>
+        function enter()
+        {
+                $('#shake-form').addClass('in').on('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', function(){
+                $('#shake-form').removeClass('in').addClass('modal-open'); });
+        }
+    </script>
+</head>
+<body>
+    <div style="position: absolute; top: 0px; left: 0px; width: 100px; height: 100px; z-index: 3000"><button onclick="enter()">Open</button></div>
+    <div class="shake-form-overlay">
+        <div id="shake-form" class="shake-form-container">
+            <div class=\"modal-content\" modal-transclude></div>
+        </div>
+    </div>
+</body>
+</html>

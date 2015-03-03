@@ -1,4 +1,6 @@
 /// <reference path="../../../typings/angularjs/angular.d.ts" />
+/// <amd-dependency path="angular"/>
+
 
 import coreModule = require("../buxNextClientCoreModule");
 

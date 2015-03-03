@@ -1,6 +1,8 @@
 /// <reference path="../typings/angularjs/angular.d.ts" />
 /// <reference path="../typings/angular-ui/angular-ui-router.d.ts" />
+/// <reference path="../typings/angular-ui-bootstrap/angular-ui-bootstrap.d.ts" />
 /// <amd-dependency path="angular-material"/>
+
 
 import app = require("./app")
 
@@ -29,31 +31,25 @@ export module BuxNextClient {
              })
              .state('main.anon.signin', {
                     url: '/signin',
-                    onEnter: function($state: ng.ui.IStateService, $mdDialog: any) {
-                        $mdDialog.show({
-                            template:
-                            '<md-dialog>' +
-                            '  <md-content>Hello {{ employee }}!</md-content>' +
-                            '  <div class="md-actions">' +
-                            '    <md-button ng-click="closeDialog()">' +
-                            '      Close Greeting' +
-                            '    </md-button>' +
-                            '  </div>' +
-                            '</md-dialog>',
-                            controller: function($scope: any, $mdDialog: any) {
-                                $scope.closeDialog = function() {
-                                    $mdDialog.hide(true);
-                                };
-                            },
-                            onComplete: function() {
-
-                            }
-                        }).finally(
-                            function()
+                    onEnter: function($state: ng.ui.IStateService, $modal: ng.ui.bootstrap.IModalService) {
+                        $modal.open(
                             {
-                                $state.go('main.anon');
-                            }
-                        );
+                                backdrop: false,
+                                controller: 'signinController',
+                                windowTemplateUrl: 'app/core/templates/modalShakeWindow.html',
+                                templateUrl: 'app/core/views/signInView.html'
+                            }).result.then((action: string) => {
+                                switch(action)
+                                {
+                                    case "register":
+                                    {
+                                        $state.go('main.anon');
+                                    }
+                                    default: {
+                                        $state.go('main.anon');
+                                    }
+                                }
+                            });
                     }}
              );
 

@@ -13,6 +13,9 @@ export module BuxNextClient.Core
                 .icon("buxNextClientCore:search", "assets/libs/material-design-icons/action/svg/design/ic_search_24px.svg", 24)
                 .icon("buxNextClientCore:login", "assets/img/log-in-512px.svg", 24)
                 .icon("buxNextClientCore:slideshow", "assets/libs/material-design-icons/image/svg/design/ic_slideshow_24px.svg", 24)
+                .icon("buxNextClientCore:close", "assets/libs/material-design-icons/navigation/svg/design/ic_close_48px.svg", 48)
+
+
 
             ;
         }

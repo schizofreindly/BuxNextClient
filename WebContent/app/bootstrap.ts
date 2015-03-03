@@ -18,6 +18,8 @@ requirejs.config(
             "angular-aria": "assets/libs/angular-aria/angular-aria",
             "angular-animate": "assets/libs/angular-animate/angular-animate",
             "angular-material": "assets/libs/angular-material/angular-material",
+            "bootstrap-transition": "assets/libs/bootstrap-ui/src/transition/transition",
+            "bootstrap-modal": "assets/libs/bootstrap-ui/src/modal/modal",
             "core" : "app/core/index"
         },
 
@@ -49,6 +51,14 @@ requirejs.config(
             },
             'angular-material' : {
                 deps: ['angular', 'angular-aria', 'angular-animate']
+            },
+            'bootstrap-transition':
+            {
+                deps: ['angular']
+            },
+            'bootstrap-modal':
+            {
+                deps: ['angular', 'bootstrap-transition']
             },
             'core' : {
                 deps: ['angular']

@@ -1,5 +1,6 @@
 /// <reference path="../../../typings/angularjs/angular.d.ts" />
-define(["require", "exports", "../buxNextClientCoreModule"], function (require, exports, coreModule) {
+/// <amd-dependency path="angular"/>
+define(["require", "exports", "../buxNextClientCoreModule", "angular"], function (require, exports, coreModule) {
     var BuxNextClient;
     (function (BuxNextClient) {
         var Core;

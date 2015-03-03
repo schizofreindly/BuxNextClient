@@ -1,5 +1,6 @@
 /// <reference path="../typings/angularjs/angular.d.ts" />
 /// <reference path="../typings/angular-ui/angular-ui-router.d.ts" />
+/// <reference path="../typings/angular-ui-bootstrap/angular-ui-bootstrap.d.ts" />
 /// <amd-dependency path="angular-material"/>
 define(["require", "exports", "./app", "angular-material"], function (require, exports, app) {
     var BuxNextClient;
@@ -27,18 +28,22 @@ define(["require", "exports", "./app", "angular-material"], function (require, e
                     }
                 }).state('main.anon.signin', {
                     url: '/signin',
-                    onEnter: function ($state, $mdDialog) {
-                        $mdDialog.show({
-                            template: '<md-dialog>' + '  <md-content>Hello {{ employee }}!</md-content>' + '  <div class="md-actions">' + '    <md-button ng-click="closeDialog()">' + '      Close Greeting' + '    </md-button>' + '  </div>' + '</md-dialog>',
-                            controller: function ($scope, $mdDialog) {
-                                $scope.closeDialog = function () {
-                                    $mdDialog.hide(true);
-                                };
-                            },
-                            onComplete: function () {
+                    onEnter: function ($state, $modal) {
+                        $modal.open({
+                            backdrop: false,
+                            controller: 'signinController',
+                            windowTemplateUrl: 'app/core/templates/modalShakeWindow.html',
+                            templateUrl: 'app/core/views/signInView.html'
+                        }).result.then(function (action) {
+                            switch (action) {
+                                case "register":
+                                    {
+                                        $state.go('main.anon');
+                                    }
+                                default: {
+                                    $state.go('main.anon');
+                                }
                             }
-                        }).finally(function () {
-                            $state.go('main.anon');
                         });
                     }
                 });
