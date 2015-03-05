@@ -17,7 +17,7 @@ export module BuxNextClient.Core.Controllers {
 
         private init(): void
         {
-            this.$scope.navBarIsOpen = false;
+            this.$scope.navBarIsOpen = true;
         }
 
         private toggleNavbar(id:string):void {

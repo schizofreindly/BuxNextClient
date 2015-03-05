@@ -20,6 +20,8 @@ requirejs.config(
             "angular-material": "assets/libs/angular-material/angular-material",
             "bootstrap-transition": "assets/libs/bootstrap-ui/src/transition/transition",
             "bootstrap-modal": "assets/libs/bootstrap-ui/src/modal/modal",
+            "angular-translate": "assets/libs/angular-translate/angular-translate",
+            "angular-translate-loader-static-files": "assets/libs/angular-translate-loader-static-files/angular-translate-loader-static-files",
             "core" : "app/core/index"
         },
 
@@ -59,6 +61,12 @@ requirejs.config(
             'bootstrap-modal':
             {
                 deps: ['angular', 'bootstrap-transition']
+            },
+            'angular-translate' : {
+                deps: ['angular']
+            },
+            'angular-translate-loader-static-files': {
+                deps: ['angular', 'angular-translate']
             },
             'core' : {
                 deps: ['angular']

@@ -14,44 +14,39 @@ export module BuxNextClient {
             $stateProvider.state("main", {
                 abstract: true,
                 template: '<ui-view/>'
-            }).state('main.anon', {
-                url: '/anon',
-                templateUrl: 'app/core/views/anonView.html',
-                controller: 'anonController'
             })
             .state('main.auth', {
                 url: '/auth',
                 templateUrl: 'app/core/views/authView.html',
                 controller: 'authController'
+            })
+            .state('main.anon', {
+                url: '/anon',
+                templateUrl: 'app/core/views/anonView.html',
+                controller: 'anonController'
+            })
+             .state('main.anon.authFunctions', {
+                 abstract: true,
+                 templateUrl: 'app/core/views/authFunctionsView.html',
+                 controller: 'authFunctionsController'
              })
-             .state('main.anon.register', {
-                url: '/register',
-                templateUrl: 'components/UserAuthentication/Views/SignupView.html',
-                controller: function() {}
+             .state('main.anon.authFunctions.signup', {
+                 url: '/signup',
+                 templateUrl: 'app/core/views/signupView.html',
+                 controller: 'signupController'
              })
-             .state('main.anon.signin', {
-                    url: '/signin',
-                    onEnter: function($state: ng.ui.IStateService, $modal: ng.ui.bootstrap.IModalService) {
-                        $modal.open(
-                            {
-                                backdrop: false,
-                                controller: 'signinController',
-                                windowTemplateUrl: 'app/core/templates/modalShakeWindow.html',
-                                templateUrl: 'app/core/views/signInView.html'
-                            }).result.then((action: string) => {
-                                switch(action)
-                                {
-                                    case "register":
-                                    {
-                                        $state.go('main.anon');
-                                    }
-                                    default: {
-                                        $state.go('main.anon');
-                                    }
-                                }
-                            });
-                    }}
-             );
+             .state('main.anon.authFunctions.signin', {
+                 url: '/signin',
+                 templateUrl: 'app/core/views/signinView.html',
+                 controller: 'signinController'
+             })
+                .state('main.anon.authFunctions.resetPassword', {
+                    url: '/reset',
+                    templateUrl: 'app/core/views/resetPasswordView.html',
+                    controller: 'resetPasswordController'
+                })
+
+            ;
 
             $location.html5Mode(false);
 

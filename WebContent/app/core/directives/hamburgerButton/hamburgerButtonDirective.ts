@@ -1,11 +1,9 @@
 /// <reference path="../../../../typings/angularjs/angular.d.ts" />
+/// <reference path="../../../../app/core/coreDefinitions.ts" />
 
 export module BuxNextClient.Core.Directives
 {
-    export interface hamburgerButtonDirectiveScope extends ng.IScope
-    {
-        isOpen() : boolean;
-    }
+
 
     export class hamburgerButtonDirective implements ng.IDirective
     {
@@ -24,7 +22,7 @@ export module BuxNextClient.Core.Directives
             isOpen: '&isOpen'
         }
 
-        link:ng.IDirectiveLinkFn = (scope: hamburgerButtonDirectiveScope,
+        link:ng.IDirectiveLinkFn = (scope: coreDefinitions.IHamburgerButtonDirectiveScope,
                                      instanceElement: ng.IAugmentedJQuery,
                                      instanceAttributes: ng.IAttributes) => {
 

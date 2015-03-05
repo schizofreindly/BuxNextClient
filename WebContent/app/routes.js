@@ -13,39 +13,30 @@ define(["require", "exports", "./app", "angular-material"], function (require, e
                 $stateProvider.state("main", {
                     abstract: true,
                     template: '<ui-view/>'
-                }).state('main.anon', {
-                    url: '/anon',
-                    templateUrl: 'app/core/views/anonView.html',
-                    controller: 'anonController'
                 }).state('main.auth', {
                     url: '/auth',
                     templateUrl: 'app/core/views/authView.html',
                     controller: 'authController'
-                }).state('main.anon.register', {
-                    url: '/register',
-                    templateUrl: 'components/UserAuthentication/Views/SignupView.html',
-                    controller: function () {
-                    }
-                }).state('main.anon.signin', {
+                }).state('main.anon', {
+                    url: '/anon',
+                    templateUrl: 'app/core/views/anonView.html',
+                    controller: 'anonController'
+                }).state('main.anon.authFunctions', {
+                    abstract: true,
+                    templateUrl: 'app/core/views/authFunctionsView.html',
+                    controller: 'authFunctionsController'
+                }).state('main.anon.authFunctions.signup', {
+                    url: '/signup',
+                    templateUrl: 'app/core/views/signupView.html',
+                    controller: 'signupController'
+                }).state('main.anon.authFunctions.signin', {
                     url: '/signin',
-                    onEnter: function ($state, $modal) {
-                        $modal.open({
-                            backdrop: false,
-                            controller: 'signinController',
-                            windowTemplateUrl: 'app/core/templates/modalShakeWindow.html',
-                            templateUrl: 'app/core/views/signInView.html'
-                        }).result.then(function (action) {
-                            switch (action) {
-                                case "register":
-                                    {
-                                        $state.go('main.anon');
-                                    }
-                                default: {
-                                    $state.go('main.anon');
-                                }
-                            }
-                        });
-                    }
+                    templateUrl: 'app/core/views/signinView.html',
+                    controller: 'signinController'
+                }).state('main.anon.authFunctions.resetPassword', {
+                    url: '/reset',
+                    templateUrl: 'app/core/views/resetPasswordView.html',
+                    controller: 'resetPasswordController'
                 });
                 $location.html5Mode(false);
                 $urlRouterProvider.when('/', function ($state) {

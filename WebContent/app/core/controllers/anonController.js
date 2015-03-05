@@ -18,7 +18,7 @@ define(["require", "exports", "../buxNextClientCoreModule"], function (require, 
                         };
                     }
                     anonController.prototype.init = function () {
-                        this.$scope.navBarIsOpen = false;
+                        this.$scope.navBarIsOpen = true;
                     };
                     anonController.prototype.toggleNavbar = function (id) {
                         this.$scope.navBarIsOpen = !this.$scope.navBarIsOpen;

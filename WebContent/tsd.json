@@ -19,6 +19,9 @@
     },
     "angular-ui-bootstrap/angular-ui-bootstrap.d.ts": {
       "commit": "bb465f2cc799a41a7ccb688c6d1a8f5583dda12d"
+    },
+    "angular-translate/angular-translate.d.ts": {
+      "commit": "bb465f2cc799a41a7ccb688c6d1a8f5583dda12d"
     }
   }
 }

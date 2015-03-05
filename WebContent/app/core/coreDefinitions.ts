@@ -12,4 +12,30 @@ declare module coreDefinitions {
         preventAnimationFirstTime: string;
     }
 
+    export interface ICountry
+    {
+        name: string;
+        code : string;
+    }
+
+    export interface IHamburgerButtonDirectiveScope extends ng.IScope
+    {
+        isOpen() : boolean;
+    }
+
+    export interface IAuthFunctionsControllerScope extends ng.IScope
+    {
+        selectedTabIndex : number;
+    }
+
+    export interface ISignUpControllerScope extends IAuthFunctionsControllerScope
+    {
+        signUp() : void;
+        countriesList: Array<ICountry>;
+    }
+
+    export interface IForgotPasswordControllerScope extends ng.IScope
+    {
+
+    }
 }
