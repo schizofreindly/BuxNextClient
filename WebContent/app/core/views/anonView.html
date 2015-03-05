@@ -1,4 +1,4 @@
-<div layout="column" style="margin: auto; overflow: hidden;" layout-fill>
+<div data-layout="column" style="margin: auto; overflow: hidden;" layout-fill>
     <div>
     <md-toolbar>
         <div class="md-toolbar-tools" style="align-content: center">
@@ -10,16 +10,16 @@
               <md-button class="md-primary md-raised md-hue-1 top-button"><md-icon md-svg-icon="buxNextClientCore:search"></md-icon><span class="space"></span>Search</md-button>
               <span class="space"></span>
               <span flex></span>
-              <md-button class="md-accent md-raised md-hue-1 top-button"><md-icon md-svg-icon="buxNextClientCore:vpnKey"></md-icon><span class="space">REGISTER</span></md-button>
+              <md-button class="md-accent md-raised md-hue-1 top-button" ui-sref="main.anon.authFunctions.signup"><md-icon md-svg-icon="buxNextClientCore:thumbsup"></md-icon><span class="space">REGISTER</span></md-button>
               <span class="space"></span>
-              <md-button class="md-accent md-raised md-hue-1 top-button" ui-sref="main.anon.signin"><md-icon md-svg-icon="buxNextClientCore:login"></md-icon><span class="space"></span>SIGN-IN</span></md-button>
+              <md-button class="md-accent md-raised md-hue-1 top-button" ui-sref="main.anon.authFunctions.signin"><md-icon md-svg-icon="buxNextClientCore:login"></md-icon><span class="space"></span>SIGN-IN</span></md-button>
             </div>
         </div>
         </md-toolbar>
         <md-toolbar class="md-primary md-hue-3" style="min-height: 3px; height: 3px;">
         </md-toolbar>
     </div>
-    <section layout="row" flex layout-fill>
+    <section layout="row" flex layout-fill class="bottom-content">
         <md-sidenav class="md-sidenav-left md-whiteframe-z2 menu" style="overflow: hidden; background: #F5F5F5;" md-component-id="left" md-is-locked-open="navBarIsOpen">
             <md-toolbar class="md-primary menu-title" layout="row">
                 <div flex="5" style="background: #DC143C;"></div>
@@ -93,8 +93,10 @@
                 <md-divider></md-divider>
             </md-content>
         </md-sidenav>
-        <md-content flex layout-fill>
-
+        <md-content class="main-content-container"  flex layout-fill>
+            <div layout="column" class="site-content">
+                <ui-view></ui-view>
+            </div>
         </md-content>
     </section>
 </div>

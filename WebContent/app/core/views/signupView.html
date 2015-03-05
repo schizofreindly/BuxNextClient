@@ -1,0 +1,53 @@
+<div role="tabpanel">
+    <md-toolbar class="md-primary md-hue-1">
+        <h1 class="md-toolbar-tools">
+            Singup
+        </h1>
+    </md-toolbar>
+    <div>
+        <md-content class="md-padding">
+            <form name="projectForm">
+                    <md-icon class="form-icon-36" md-svg-icon="buxNextClientCore:person"></md-icon>
+                    <md-input-container>
+                            <label>Username</label>
+                            <input md-maxlength="30" required name="username" ng-model="userSignupModel.username">
+                    </md-input-container>
+                    <md-icon class="form-icon-36" md-svg-icon="buxNextClientCore:lock"></md-icon>
+                        <md-input-container>
+                        <label>Password</label>
+                        <input md-maxlength="30" type="password" ng-model="userSignupModel.password">
+                    </md-input-container>
+                    <img class="form-icon-36" src="assets/img/ic_lock_confirm_48px.png">
+                        <md-input-container>
+                        <label>Confirm Password</label>
+                        <input md-maxlength="30" type="password" ng-model="userSignupModel.confirmPassword">
+                    </md-input-container>
+                    <md-icon class="form-icon-36" md-svg-icon="buxNextClientCore:email"></md-icon>
+                    <md-input-container>
+                        <label>Email</label>
+                        <input md-maxlength="30" required name="username" ng-model="userSignupModel.username">
+                    </md-input-container>
+                    <md-icon class="form-icon-36" md-svg-icon="buxNextClientCore:location"></md-icon>
+                    <md-input-container>
+                        <label>Country</label>
+                        <input md-maxlength="30" required name="username" ng-model="userSignupModel.username">
+                    </md-input-container>
+                    <md-icon class="form-icon-36" md-svg-icon="buxNextClientCore:phone"></md-icon>
+                    <md-input-container>
+                        <label>Phone</label>
+                        <input md-maxlength="30" required name="username" ng-model="userSignupModel.username">
+                    </md-input-container>
+                    <md-icon class="form-icon-36" md-svg-icon="buxNextClientCore:event"></md-icon>
+                    <md-input-container>
+                        <label>Date of Birth</label>
+                        <input md-maxlength="30" required name="username" ng-model="userSignupModel.username">
+                    </md-input-container>
+            </form>
+        </md-content>
+        <md-toolbar class="md-primary md-hue-1 content-toolbar-footer">
+            <h1 class="md-toolbar-tools">
+                <div flex></div><md-button class="md-accent md-raised top-button" ui-sref="main.anon.authFunctions.signup"><md-icon md-svg-icon="buxNextClientCore:thumbsup"></md-icon><span class="space"></span>Sign Up</md-button>
+            </h1>
+        </md-toolbar>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div layout="column" class="form-view authFunctionsTabs" style="box-shadow:  0px 0px 0px 5px rgba( 255,255,255,0.4 ), 0px 4px 20px rgba( 0,0,0,0.33 ); border-radius: 5px;">
+    <md-tabs flex class="md-primary content-toolbar" md-selected="selectedTabIndex">
+        <md-tab aria-controls="tab1-content" ui-sref="main.anon.authFunctions.signin">
+            Sign In
+        </md-tab>
+        <md-tab aria-controls="tab2-content" ui-sref="main.anon.authFunctions.resetPassword">
+            Forgot Password
+        </md-tab>
+        <md-tab aria-controls="tab3-content" ui-sref="main.anon.authFunctions.signup">
+            Sign Up
+        </md-tab>
+    </md-tabs>
+    <ui-view>
+
+    </ui-view>
+</div>
